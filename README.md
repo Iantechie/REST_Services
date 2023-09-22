@@ -11,4 +11,5 @@
 #### `python manage.py runserver`
 
 #### Output
-![image](image.png)
+
+![image](https://github.com/Iantechie/REST_Services/assets/77444698/48648de3-6718-4b4e-afcb-5cd6b73d0eda)
