@@ -11,4 +11,4 @@
 #### `python manage.py runserver`
 
 #### Output
-![Get method]image.png
+![image](image.png)
