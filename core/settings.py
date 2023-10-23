@@ -129,8 +129,37 @@ REST_FRAMEWORK = {
     ]
 }
 
+<<<<<<< Updated upstream:core/settings.py
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = os.getenv("EMAIL_HOST")                    # smtp-relay.sendinblue.com
+EMAIL_USE_TLS = False                
+EMAIL_PORT = os.getenv("EMAIL_PORT")                   # 587
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")              
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")      
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL ")   # email ending with @sendinblue.com
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+
+PASSWORD_RESET_CONFIRM_REDIRECT_BASE_URL = \
+    "http://localhost:3000/password-reset/confirm/"
+
+EMAIL_CONFIRM_REDIRECT_BASE_URL = \
+    "http://localhost:3000/email/confirm/"
+
+=======
+>>>>>>> Stashed changes:Rest_framework/settings.py
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 
+<<<<<<< Updated upstream:core/settings.py
 ]
+#SECURE TOKEN AUTH to use https only
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+=======
+]
+>>>>>>> Stashed changes:Rest_framework/settings.py
